@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const sequelize = require('./db')
 const cors = require('cors')
+const fileUpload = require('express-fileupload')
 const models = require('./models/models')
 const router = require('./routers/index')
 const errorHandler = require('./middleware/ErrorHandlingMiddleWare')
@@ -12,6 +13,7 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
+app.use(fileUpload({}))
 app.use('/api', router)
 
 // обработка ошибок, последний MiddleWare
