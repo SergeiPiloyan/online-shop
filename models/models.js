@@ -49,7 +49,6 @@ const TypeBrand = sequelize.define('type_brand', {
     id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true }
 })
 
-
 User.hasOne(Basket) // one user can have one basket
 Basket.belongsTo(User) // and one basket can have only one user 
 

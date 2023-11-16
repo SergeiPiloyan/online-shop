@@ -4,7 +4,6 @@ const { Device, DeviceInfo } = require('../models/models');
 const ApiError = require('../error/ApiError');
 const { where } = require('sequelize');
 
-
 class DeviceController {
 
     async create(req, res, next) {
@@ -72,7 +71,5 @@ class DeviceController {
         return res.json(device)
     }
 }
-
-
 
 module.exports = new DeviceController()

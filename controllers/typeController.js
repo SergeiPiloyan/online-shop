@@ -14,10 +14,10 @@ class TypeController {
         return res.json(types)
     }
 
-    async delete(req, res) { }
+    async delete(req, res) {
+
+    }
 
 }
-
-
 
 module.exports = new TypeController()
